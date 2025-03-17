@@ -632,6 +632,7 @@ bool Recompiler::Recompile(
                 if (label < fn.base || label >= fn.base + fn.size)
                 {
                     println("\t\t// ERROR: 0x{:X}", label);
+                    println("\t\tLOG_UTILITY(\"ERROR: 0x{:X}\");", label);
                     fmt::println("ERROR: Switch case at {:X} is trying to jump outside function: {:X}", base, label);
                     println("\t\treturn;");
                 }

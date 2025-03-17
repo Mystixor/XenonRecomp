@@ -16,6 +16,9 @@
 #include <x86/sse.h>
 #include <x86/sse4.1.h>
 
+#include "string"
+#include "os/logger.h"
+
 // SSE3 constants are missing from simde
 #ifndef _MM_DENORMALS_ZERO_MASK
 #define _MM_DENORMALS_ZERO_MASK 0x0040
